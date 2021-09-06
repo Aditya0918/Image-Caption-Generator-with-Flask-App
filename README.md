@@ -6,7 +6,7 @@
 
 ### The main deliverables of this project are a flask application and a model file which can be used as a pipeline in some other project that uses image based captions.
 
-### You can directly use the model file, vocacbulary object and create a flask application or you can train the model entirely from scratch either locally (If you have high computing power) or using cloud resources.
+### You can directly use the model file, vocacbulary object and create a flask application or you can train the model entirely from scratch either locally (If you have high computing power) or using cloud resources. You need to create an empty folder by the name of static in the same directory while creating the application.
 
 ### Google colab was used as a platform and the dataset used for training the model was flickr8k dataset consisting of about 8000 images with 5 different captions for each image.
 
