@@ -1,0 +1,108 @@
+<html>
+<style>
+
+    html{
+
+        font-size: 10px;
+    }
+    body{
+
+        background-image: linear-gradient(to right top, #30cfd0, #00a4ca, #0076bc, #00469c, #330867);
+    }
+
+    .abc{
+
+        background-color: #FA5F55;
+        text-align: center;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: aqua;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        height: 5rem;
+        font-size: 4rem;
+    }
+
+    form{
+
+        display: block;
+        position: absolute;
+        width: 600px;
+        height: 300px;
+        margin-left:32.5%;
+        margin-top:10%;
+        background-image: linear-gradient(to right top, #89f7fe, #63e6ff, #48d3ff, #4abeff, #66a6ff);
+    }
+
+    .pqr{
+
+        background-color: white;
+        margin-top: 10%;
+        margin-left:20%;
+        width: 70%;
+
+    }
+
+    .xyz{
+
+        display: inline-block;
+        position:absolute;
+        height: 50px;
+        width: 150px;
+        background-image: linear-gradient(to right top, #4884ee, #2b93f5, #00a2f9, #00affb, #06bcfb);
+        color:black;
+        font-size: 18px;
+        top: 45%;
+        left:20%;
+
+    }
+
+    #resetbtn{
+
+        display: inline-block;
+        position: absolute;
+        height: 50px;
+        width: 150px;
+        background-image: linear-gradient(to right top, #4884ee, #2b93f5, #00a2f9, #00affb, #06bcfb);
+        color:black;
+        font-size: 18px;
+        top: 45%;
+        right:10%;
+
+
+
+    }
+
+
+</style>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+<script>
+
+$(document).ready(function() {
+            $('#resetbtn').on('click', function(e) {
+                var $el = $('#infileid');
+                $el.wrap('<form>').closest(
+                  'form').get(0).reset();
+                $el.unwrap();
+            });
+        });
+   
+</script>
+
+<body>
+    <h1 class="abc">Image Captioning</h1>
+<form action="{{url_for('after')}}" enctype="multipart/form-data" method="POST"> 
+
+    <div id="uploadFile_div">
+        <input type="file" name='file2' id="infileid" class="pqr">
+    </div>
+    <br>
+    <br>
+<button type="submit" class="xyz">Generate Caption</button>
+<button id="resetbtn" type="button" class="clear-image">Clear Image</button>
+</form>
+</body>
+</html>
